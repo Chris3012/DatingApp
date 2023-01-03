@@ -9,14 +9,19 @@ import { AccountService } from 'src/_services/account.service';
 export class RegisterComponent implements OnInit {
   model: any = {};
   @Output() cancelRegister = new EventEmitter();
-  constructor(private accountService: AccountService) {}
+  constructor(
+    private accountService: AccountService,
+  ) {}
 
   register() {
     this.accountService.register(this.model).subscribe({
       next: (response) => {
         this.cancel();
       },
-      error: (error) => console.log(error),
+      error: (error) => {
+        // this.toasterService.error(error.error);
+        console.log(error);
+      },
     });
   }
 
