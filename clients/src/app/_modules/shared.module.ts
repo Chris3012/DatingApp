@@ -8,10 +8,14 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
   declarations: [],
   imports: [
     CommonModule,
-    BsDropdownModule,
+    BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
     NgxGalleryModule,
   ],
-  exports: [BsDropdownModule, TabsModule, NgxGalleryModule],
+  exports: [
+    BsDropdownModule,
+    TabsModule,
+    NgxGalleryModule,
+  ],
 })
 export class SharedModule {}

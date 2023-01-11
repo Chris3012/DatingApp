@@ -1,4 +1,7 @@
 {
   "dependencies": {
+    "@angular/animations": "^15.0.4",
+    "ngx-spinner": "^15.0.1",
+    "ngx-toastr": "^16.0.2"
   }
 }
